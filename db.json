@@ -1,6 +1,27 @@
 {
   "posts": [
-
+    {
+      "eid": 12,
+      "name": "john",
+      "mobile": 7068694512,
+      "email": "harry@gmail.com",
+      "address": "Asaba",
+      "salary": 300000,
+      "gender": "male",
+      "position": "React Developer",
+      "id": 1
+    },
+    {
+      "eid": 12,
+      "name": "john",
+      "mobile": 7068694512,
+      "email": "harry@gmail.com",
+      "address": "Asaba",
+      "salary": 300000,
+      "gender": "male",
+      "position": "React Developer",
+      "id": 2
+    }
   ],
   "comments": [
     {
