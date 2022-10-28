@@ -5,5 +5,6 @@ export interface employee{
     gender: string;
     email:string;
     position: string;
-    address: string
+    address: string;
+    salary:number
 }

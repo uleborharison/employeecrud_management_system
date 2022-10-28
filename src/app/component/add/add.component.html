@@ -6,15 +6,72 @@
       <div class="col-4">
         <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
           <mat-label>Employee Id</mat-label>
-          <input matInput type="number" placeholder="Enter employee id">
+          <input matInput type="number" name="eid" [(ngModel)]="empy.eid" placeholder="Enter employee id">
         </mat-form-field>
       </div>
       <div class="col-4">
         <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
           <mat-label>Employee Name</mat-label>
-          <input matInput type="name" placeholder="Enter employee name">
+          <input matInput type="name" name="name" [(ngModel)]="empy.name" placeholder="Enter employee name">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="number" name="mobile" [(ngModel)]="empy.mobile"
+            placeholder="Enter employee Phone Number">
         </mat-form-field>
       </div>
     </div>
+
+
+    <div class="row">
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+          <mat-label>Enter Email</mat-label>
+          <input matInput type="email" name="gender" [(ngModel)]="empy.email" placeholder="Please Enter Your Email">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+          <mat-label>Enter Address</mat-label>
+          <textarea matInput type="name" name="email" [(ngModel)]="empy.address"
+            placeholder="Enter employee name"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+          <mat-label>Salary</mat-label>
+          <input matInput type="number" name="position" [(ngModel)]="empy.salary" placeholder="Enter employee Salary">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 appearance="outline">
+          <mat-label>Gender</mat-label>
+          <mat-select name="gender" [(ngModel)]="empy.gender">
+            <mat-option *ngFor="let gender of usergender" [value]="gender.value">
+              {{gender.viewvalue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field [style.width.px]=357 appearance="outline">
+          <mat-label>Position</mat-label>
+          <mat-select name="position" [(ngModel)]="empy.position">
+            <mat-option *ngFor="let userposition of position" [value]="userposition.value">
+              {{userposition.viewvalue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
   </form>
+  <div style="text-align:center;">
+    <button type="button" class="btn btn-dark margin-left">Add</button>
+    <button [routerLink]="['/view']" type="button" class="btn btn-danger margin-left">View</button>
+  </div>
 </div>
