@@ -15,12 +15,19 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     this.getmyuser()
   }
+
   getmyuser(){
     this.employeeservice.getuser().subscribe(res=>{
       this.myemployee = res;
-console.log(res);
-
+//console.log(res);
     })
+  }
+
+  deleteuser(user: any){
+    if(confirm('Are you sure you to delete?'))
+    this.employeeservice.delete(user).subscribe(()=>{
+    });
+    this.getmyuser()
   }
 
 }

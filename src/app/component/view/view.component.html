@@ -26,13 +26,16 @@
         <th>{{user.mobile}}</th>
         <th>{{user.salary}}</th>
         <th>{{user.email}}</th>
-        <th>
-          <i style="color: blue" class="fa fa-edit"></i> &nbsp;
-          <i style="color: red" class="fa fa-trash"></i>
+        <td>
 
-        </th>
+          <i routerLink="/edit/update/{{user.id}}" style="color: blue" class="fa fa-edit"></i> &nbsp;
+          <i (click)="deleteuser(user)" style="color: red" class="fa fa-trash"></i>
+        </td>
       </tr>
 
     </tbody>
   </table>
+</div>
+<div style="text-align:center">
+  <button routerLink="/" class="btn btn-dark">BACK</button>
 </div>

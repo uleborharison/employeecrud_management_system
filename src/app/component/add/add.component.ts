@@ -2,6 +2,7 @@ import { MyserviceService } from './../../service/myservice.service';
 import { employee } from './../employeemodel';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+//import { Router } from '@angular/router';
 
 
 interface gender{
@@ -29,11 +30,11 @@ position:userposition[]=[
   {value:'React Developer', viewvalue: 'React Developer'},
   {value:'Java Developer', viewvalue: 'Java Developer'},
 ]
-  router: any;
-  constructor(private employeeservice: MyserviceService, router: Router) { }
+  constructor(private employeeservice: MyserviceService, private router:Router) { }
 
   ngOnInit(): void {
   }
+
 add(){
   this.employeeservice.creatuser(this.empy).subscribe((data:employee)=>{
     console.log(data);
